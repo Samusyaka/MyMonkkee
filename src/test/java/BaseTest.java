@@ -10,6 +10,7 @@ public class BaseTest {
     BaseTest() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 
     public void open(String url) {

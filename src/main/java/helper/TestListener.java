@@ -9,22 +9,22 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult iTestResult) {
-        System.out.println("The name of the testcase started is :"+iTestResult.getName());
+        System.out.println("Название запущенного теста:"+iTestResult.getName());
     }
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
-        System.out.println("The name of the testcase succcess is :"+iTestResult.getName());
+        System.out.println("Название успешного теста:"+iTestResult.getName());
     }
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
-        System.out.println("The name of the testcase failed is :"+iTestResult.getName());
+        System.out.println("Название неуспешного теста:"+iTestResult.getName());
     }
 
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
-        System.out.println("The name of the testcase skipped is :"+iTestResult.getName());
+        System.out.println("Название пропущенного теста:"+iTestResult.getName());
     }
 
     @Override

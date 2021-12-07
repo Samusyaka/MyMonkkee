@@ -7,10 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.sql.Driver;
 import java.sql.DriverAction;
@@ -28,6 +25,11 @@ public class LoginPageTest extends BaseTest {
         loginPage = new LoginPage(getDriver());
         open(LoginPage.url);
         loginPage.waitForPageLoad(LoginPage.footer.links);
+    }
+    @AfterClass
+    public void tearDown() {
+       // logout();
+        quit();
     }
 
     @Test(retryAnalyzer = RetryAnalyzer.class)

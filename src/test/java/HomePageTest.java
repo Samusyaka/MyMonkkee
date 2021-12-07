@@ -31,7 +31,7 @@ public class HomePageTest extends BaseTest{
     }
 
 
-    @Test(retryAnalyzer = RetryAnalyzer.class)
+    @Test (retryAnalyzer = RetryAnalyzer.class)
     public void createNewEntry() {
 
         String entryText = createEntry();
@@ -46,7 +46,7 @@ public class HomePageTest extends BaseTest{
         Assert.assertTrue(flag);
     }
 
-    @Test(retryAnalyzer = RetryAnalyzer.class)
+    @Test (retryAnalyzer = RetryAnalyzer.class)
     public void deleteEntry() {
         Random random = new Random();
         String entryText = createEntry();
@@ -77,7 +77,7 @@ public class HomePageTest extends BaseTest{
         Assert.assertTrue(compareLists(entriesBeforeDeletingText, entriesAfterDeletingText));
     }
 
-    @Test(retryAnalyzer = RetryAnalyzer.class)
+    @Test (retryAnalyzer = RetryAnalyzer.class)
     public void search() throws InterruptedException {
         String text = createEntry();
         runSearch(text);
@@ -90,6 +90,7 @@ public class HomePageTest extends BaseTest{
     @AfterClass
     public void tearDown() {
         logout();
+        quit();
     }
 
     @Step("Создание новой записи")
@@ -101,7 +102,7 @@ public class HomePageTest extends BaseTest{
         homePage.find(HomePage.textArea).sendKeys(text);
         homePage.find(HomePage.homeButton).click();
         homePage.waitForPageLoad(HomePage.plusButton);
-        Allure.addAttachment("Entry value", text);
+        Allure.addAttachment("Введенное значение", text);
         return text;
     }
 
