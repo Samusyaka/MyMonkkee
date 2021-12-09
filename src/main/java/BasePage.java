@@ -44,7 +44,7 @@ public abstract class BasePage {
         return driver.findElements(locator);
     }
 
-    @SuppressWarnings("deprecation")
+
     public void waitForPageLoad(By locator) {
         WebDriverWait wait = new WebDriverWait(driver, TIMEOUT);
         wait.until(ExpectedConditions.elementToBeClickable(locator));
