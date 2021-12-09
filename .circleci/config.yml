@@ -28,6 +28,10 @@ jobs:
           command: mvn clean test
       - run:
           name: Generate allure report
+          command: mvn allure:install
+          when: always
+      - run:
+          name: Generate allure report
           command: mvn allure:report
           when: always
       - store_test_results:
