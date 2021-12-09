@@ -33,7 +33,7 @@ jobs:
       - store_test_results:
           path: target/surefire-reports/junitreports
       - store_artifacts:
-          path: ~/target/site/allure-maven-plugin/
+          path: /project/target/allure-report 
 workflows:
   version: 2
   commit:
