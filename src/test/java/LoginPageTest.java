@@ -84,7 +84,7 @@ public class LoginPageTest extends BaseTest {
         loginPage.find(LoginPage.passwordInput).sendKeys(LoginPage.password);
         loginPage.find(LoginPage.loginButton).click();
 
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         Assert.assertEquals(getCurrentUrl(), "https://my.monkkee.com/#/entries");
     }
 }
