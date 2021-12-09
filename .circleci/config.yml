@@ -3,6 +3,8 @@
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 # https://circleci.com/docs/2.0/browser-testing/#selenium
 version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.2.3
 jobs:
   ui-tests:
     docker:
