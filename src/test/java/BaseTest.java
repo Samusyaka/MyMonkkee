@@ -1,13 +1,15 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 
 import java.util.ArrayList;
 
 public class BaseTest {
     private WebDriver driver;
 
-    BaseTest() {
+    @BeforeTest
+    public void beforeTest() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
