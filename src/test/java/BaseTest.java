@@ -10,7 +10,7 @@ public class BaseTest {
 
     @BeforeTest
     public void beforeTest() {
-        System.setProperty("webdriver.chrome.driver", "/home/circleci/project/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/home/circleci/chromedriver");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
